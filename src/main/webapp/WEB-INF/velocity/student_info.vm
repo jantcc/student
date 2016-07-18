@@ -1,0 +1,20 @@
+<table>
+    <tr>
+        <td>学号</td>
+        <td>姓名</td>
+        <td>成绩</td>
+        <td>操作</td>
+    </tr>
+            #foreach($student in $list)
+                <tr>
+                <td>$!{student.id}</td>
+                <td>$!{student.name}</td>
+                <td>$!{student.grade}</td>
+                <td><input type="button" value="修改" onclick="window.location.href = '../update.jsp?ID=${student.id}&NAME=${student.name}'">
+                    <input type="button" value="删除" onclick="window.location.href = 'delete?ID=${student.id}'">
+                </td>
+                </tr>
+            #end
+    <tr><a href="../index.jsp">返回主页</a></tr>
+</table>
+
