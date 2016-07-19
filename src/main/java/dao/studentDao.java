@@ -1,9 +1,11 @@
 package dao;
 
 import model.student;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
+@Repository
 public interface studentDao {
     int deleteByPrimaryKey(Integer id);
 

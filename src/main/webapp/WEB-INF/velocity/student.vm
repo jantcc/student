@@ -1,0 +1,14 @@
+<table>
+    <tr>
+        <td>学号</td>
+        <td>姓名</td>
+        <td>成绩</td>
+    </tr>
+
+    <tr>
+        <td>${student.id}</td>
+        <td>${student.name}</td>
+       <td>${student.grade}</td>
+    </tr>
+
+</table>

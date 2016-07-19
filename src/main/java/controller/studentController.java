@@ -33,22 +33,29 @@ public class studentController {
     public String queryAllstudent(HttpServletRequest request, ModelMap ctx){
         List<student> list = this.stuService.queryAllStudent();
         ctx.put("list",list);
-        return "student_info";
+        return "student_info.vm";
     }
     @RequestMapping("update")
-    public String updateStudent(ModelMap ctx,student stu){
+    public String updateStudent(student stu){
         this.stuService.updateByID(stu);
         return "index.jsp";
     }
     @RequestMapping("delete")
-    public String deteleStudent(HttpServletRequest request,ModelMap ctx){
+    public String deteleStudent(HttpServletRequest request){
         int id = Integer.parseInt(request.getParameter("ID"));
         this.stuService.deleteByID(id);
         return "index.jsp";
     }
     @RequestMapping("add")
-    public String addStudent(HttpServletRequest request,ModelMap ctx,student stu){
+    public String addStudent(student stu){
         this.stuService.insert(stu);
         return "index.jsp";
+    }
+    @RequestMapping("selectById")
+    public String selectByID(HttpServletRequest request,ModelMap ctx){
+        int id = Integer.parseInt(request.getParameter("studentid"));
+        student stu = this.stuService.selectByID(id);
+        ctx.put("student",stu);
+        return "student.vm";
     }
 }

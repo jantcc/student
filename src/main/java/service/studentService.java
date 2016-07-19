@@ -12,4 +12,5 @@ public interface studentService {
     public int updateByID(student stu);
     public int deleteByID(Integer id);
     public int insert(student stu);
+    public student selectByID(Integer id);
 }
