@@ -1,4 +1,21 @@
-<table>
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>大学生成绩管理系统</title>
+
+    <!-- Bootstrap -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <script src="../js/jquery-1.9.1.min.js" ></script>
+    <script src="../js/bootstrap.min.js"></script>
+</head>
+<div>
+     <a href="../index.jsp"><img src="../image/title.png" class="center-block" ></a>
+</div>
+<table class="table table-bordered table-hover text-center" >
     <tr>
         <td>学号</td>
         <td>姓名</td>
@@ -7,14 +24,14 @@
     </tr>
             #foreach($student in $list)
                 <tr>
-                <td>$!{student.id}</td>
-                <td>$!{student.name}</td>
-                <td>$!{student.grade}</td>
-                <td><input type="button" value="修改" onclick="window.location.href = '../update.jsp?ID=${student.id}&NAME=${student.name}'">
-                    <input type="button" value="删除" onclick="window.location.href = 'delete?ID=${student.id}'">
+                    <td>$!{student.id}</td>
+                    <td>$!{student.name}</td>
+                    <td>$!{student.grade}</td>
+                    <td><input  class="btn btn-success" type="button" value="修改" onclick="window.location.href = '../update.jsp?ID=${student.id}&NAME=${student.name}'">
+                    <input  class="btn btn-success" type="button" value="删除" onclick="window.location.href = 'delete?ID=${student.id}'">
                 </td>
                 </tr>
             #end
-    <tr><a href="../index.jsp">返回主页</a></tr>
+
 </table>
 
