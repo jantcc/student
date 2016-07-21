@@ -7,4 +7,4 @@ springMVC+myBatis+velocity+Bootstrap
 
 这个项目主要用来实践自己学的新技术并不断完善改进整合。
 
-学习ing
+学习ing..
