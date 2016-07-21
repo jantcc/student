@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
     <title>添加学生成绩</title>
-
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <script src="js/jquery-1.9.1.min.js" ></script>
@@ -28,12 +27,10 @@
             }
             return true;
         }
-
-
     </script>
 </head>
 <body>
-<form action="/studentController/add" method="post" onsubmit="return check();">
+<form action="/studentController/add" method="post" onsubmit="return check();" >
     <table class="table table-hover table-bordered text-center ">
         <tr>
             <td>学号</td>
@@ -53,7 +50,6 @@
             </td>
         </tr>
     </table>
-
 </form>
 </body>
 </html>

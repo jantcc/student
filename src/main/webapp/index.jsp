@@ -10,11 +10,21 @@
 
     <!-- Bootstrap -->
     <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/bootstrapValidator.css" rel="stylesheet">
     <link href="../css/shake.css" rel="stylesheet" media="all">
     <script src="../js/jquery-1.9.1.min.js" ></script>
+    <script src="../js/bootstrapValidator.js"></script>
     <script src="../js/bootstrap.min.js"></script>
     <script src="../css/csshake.min.css"></script>
-
+    <script>
+        function validate(){
+            if($("#studentid").val().length==0){
+                alert("学号不能为空!")
+                return false;
+            }
+            return true;
+        }
+    </script>
 </head>
 <body>
 
@@ -61,11 +71,11 @@
 </div>
 
 <div id="demo" class="collapse  ">
-    <form method="post" action="/studentController/selectById">
+    <form method="post" action="/studentController/selectById" onsubmit="return validate();">
         <table  class="table table-hover" >
             <tr>
                 <td>请输入学号查询成绩：
-                    <input type="text" name="studentid">
+                    <input type="text"  id="studentid" name="studentid">
                     <input type="submit"  class="btn btn-success" value="查询" ></td>
             </tr>
         </table>
