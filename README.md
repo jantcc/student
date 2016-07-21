@@ -8,3 +8,6 @@ springMVC+myBatis+velocity+Bootstrap
 这个项目主要用来实践自己学的新技术并不断完善改进整合。
 
 学习ing..
+
+2016/7/21
+新增了数据分页显示，所有输入框判空校验
