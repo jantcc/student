@@ -9,8 +9,18 @@
   <sql id="Base_Column_List" >
     id, name, grade
   </sql>
+
   <select id="queryAllStudent"  resultMap="BaseResultMap" >
     select * from stu
+  </select>
+
+  <select id="pagequeryStudent"  resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select * from stu
+    limit #{pageNow,jdbcType=INTEGER},5
+  </select>
+
+  <select id="countByPrimaryKey" resultType="int" >
+   select count(*) from stu
   </select>
 
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >

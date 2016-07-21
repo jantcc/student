@@ -38,4 +38,6 @@ public class studentServiceImpl implements studentService {
         return this.stuDao.insert(stu);
     }
     public student selectByID(Integer id){return this.stuDao.selectByPrimaryKey(id);}
+    public int countStudent(){return this.stuDao.countByPrimaryKey();}
+    public List<student> pagequeryStudent(Integer pageNow){return this.stuDao.pagequeryStudent(pageNow);};
 }

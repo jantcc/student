@@ -23,9 +23,9 @@
     </tr>
 
     <tr>
-        <td>${student.id}</td>
-        <td>${student.name}</td>
-        <td>${student.grade}</td>
+        <td>$!{student.id}</td>
+        <td>$!{student.name}</td>
+        <td>$!{student.grade}</td>
     </tr>
 
 </table>

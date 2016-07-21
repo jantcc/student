@@ -15,7 +15,7 @@
 <div>
      <a href="../index.jsp"><img src="../image/title.png" class="center-block" ></a>
 </div>
-<table class="table table-bordered table-hover text-center" >
+<table id="mytable" class="table table-bordered table-hover text-center"  width="100%"   style="table-layout:fixed"   >
     <tr>
         <td>学号</td>
         <td>姓名</td>
@@ -33,5 +33,20 @@
                 </tr>
             #end
 
+    <tr>
+    <td colspan="4">
+
+
+            <ul class="pagination">
+                <li><a href="#">&laquo;</a></li>
+                #foreach($i in [1..${page}])
+                <li id="$i"><a href="pageQuery?pageNow=$i">$i</a></li>
+                #end
+                <li><a href="#">&raquo;</a></li>
+            </ul>
+
+    </td>
+    </tr>
+    <tr><td colspan="4">共有${Allrecords}条记录</td></tr>
 </table>
 

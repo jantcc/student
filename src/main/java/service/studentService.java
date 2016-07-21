@@ -13,4 +13,6 @@ public interface studentService {
     public int deleteByID(Integer id);
     public int insert(student stu);
     public student selectByID(Integer id);
+    public int countStudent();
+    public List<student> pagequeryStudent(Integer pageNow);
 }

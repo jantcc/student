@@ -20,4 +20,6 @@ public interface studentDao {
     int updateByPrimaryKeySelective(student record);
 
     int updateByPrimaryKey(student record);
+    int countByPrimaryKey();
+    List<student> pagequeryStudent(Integer pageNow);
 }

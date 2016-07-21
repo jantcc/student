@@ -35,6 +35,24 @@ public class studentController {
         ctx.put("list",list);
         return "student_info.vm";
     }
+    @RequestMapping("pageQuery")
+    public String pageQuery( HttpServletRequest request,ModelMap ctx){
+        int page=0;
+        int pagesize=5;
+        int Allrecords = this.stuService.countStudent();
+        if(Allrecords%5==0) {page=Allrecords/pagesize;}
+        else {page=(Allrecords/pagesize)+1;}
+        ctx.put("page",page);
+        ctx.put("Allrecords",Allrecords);
+        //设置每页显示5条数据
+        String tempstr = request.getParameter("pageNow");
+        if (tempstr==null) tempstr="1";
+        int temp_pageNow = Integer.parseInt(tempstr);
+        int pageNow = (temp_pageNow-1)*5;
+        List<student> list = this.stuService.pagequeryStudent(pageNow);
+        ctx.put("list",list);
+        return "student_info.vm";
+    }
     @RequestMapping("update")
     public String updateStudent(student stu){
         this.stuService.updateByID(stu);

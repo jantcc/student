@@ -35,7 +35,7 @@
     <br>
     <div class="row" >
         <div class="col-sm-4 text-center" >
-           <a  class="shake shake-slow"  href="/studentController/queryAll"><img src="../image/001.png">
+           <a  class="shake shake-slow"  href="/studentController/pageQuery"><img src="../image/001.png">
            </a>
             <img src="../image/002.png" >
         </div>
